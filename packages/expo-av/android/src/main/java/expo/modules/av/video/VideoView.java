@@ -332,7 +332,7 @@ public class VideoView extends FrameLayout implements AudioEventHandler, Fullscr
     mPlayerData.setErrorListener(new PlayerData.ErrorListener() {
       @Override
       public void onError(final String error) {
-        unloadPlayerAndMediaController();
+        //unloadPlayerAndMediaController();
         callOnError(error);
       }
     });
@@ -389,7 +389,7 @@ public class VideoView extends FrameLayout implements AudioEventHandler, Fullscr
         }
         mShouldShowFullscreenPlayerOnLoad = false;
 
-        unloadPlayerAndMediaController();
+        //unloadPlayerAndMediaController();
         if (promise != null) {
           promise.reject("E_VIDEO_NOTCREATED", error);
         }

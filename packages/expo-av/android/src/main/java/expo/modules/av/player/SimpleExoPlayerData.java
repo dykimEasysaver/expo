@@ -342,11 +342,11 @@ class SimpleExoPlayerData extends PlayerData
     if (mLoadCompletionListener != null) {
       final LoadCompletionListener listener = mLoadCompletionListener;
       mLoadCompletionListener = null;
-      listener.onLoadError("release disable " + error.toString());
+      listener.onLoadError(error.toString());
     } else {
       mErrorListener.onError("Player error: " + error.getMessage());
     }
-    //release();
+    release();
   }
 
   // SimpleExoPlayer.VideoListener
